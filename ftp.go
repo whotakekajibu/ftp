@@ -770,6 +770,16 @@ func (c *ServerConn) Retr(path string) (*Response, error) {
 	return c.RetrFrom(path, 0)
 }
 
+func (c *ServerConn) Get(path string) (*Response, error) {
+	/*	conn, err := c.cmdDataConnFrom(offset, "RETR %s", path)
+		if err != nil {
+			return nil, err
+		}*/
+
+	//return &Response{conn: conn, c: c}, nil
+	return nil, nil
+}
+
 // RetrFrom issues a RETR FTP command to fetch the specified file from the remote
 // FTP server, the server will not send the offset first bytes of the file.
 //
